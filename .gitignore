@@ -1,1 +1,6 @@
-# currently empty, but you can add file/folder here if needed
+.venv/
+.env
+__pycache__/
+.pytest_cache/
+.vscode/
+.DS_Store

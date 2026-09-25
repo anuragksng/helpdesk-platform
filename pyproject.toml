@@ -1,0 +1,36 @@
+[project]
+name = "helpdesk-platform"
+version = "0.1.0"
+description = "A helpdesk platform built with FastAPI and PostgreSQL"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "fastapi>=0.141.1",
+    "uvicorn[standard]",
+    "sqlalchemy",
+    "psycopg2-binary",
+    "python-dotenv",
+]
+
+[tool.pytest.ini_options]
+minversion = "7.0"
+addopts = "-ra -q"
+testpaths = [
+    "tests",
+]
+python_files = "test_*.py"
+
+[tool.ruff]
+# Target Python version matching your environment
+target-version = "py311"
+# Line length limit for standard styling
+line-length = 88
+
+[tool.ruff.lint]
+# Enable Pyflakes (F) and pycodestyle (E, W) codes by default
+select = ["E", "F", "W", "I"]
+ignore = []
+
+# Allow fixable violations to be automatically fixed by ruff
+fixable = ["ALL"]
+unfixable = []

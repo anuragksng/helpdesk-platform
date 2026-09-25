@@ -1,7 +1,9 @@
-from fastapi import APIRouter
 
-router = APIRouter()
+from xmlrpc import client
 
-@router.get("/")
+
 def test_health_check():
-    return {"status": "ok"}
+    response = client.get("/health/")
+    
+    assert ...
+    assert ...
